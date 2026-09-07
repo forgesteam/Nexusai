@@ -1,0 +1,15 @@
+export type User = { id: string; email: string; name: string; picture?: string };
+export type Attachment = { filename: string; url: string; size: number; contentType: string; kind: 'image' | 'file'; documentId?: string };
+export type ChatMessage = { id: string; role: 'user' | 'assistant' | 'system'; text: string; createdAt: number; attachments?: Attachment[]; sources?: SearchSource[] };
+export type SearchSource = { title: string; url: string; snippet: string; source: string; image?: string };
+export type NexusConversation = { id: string; title: string; projectId?: string; folderId?: string; pinned?: boolean; favorite?: boolean; archived?: boolean; personalityId?: string; createdAt: number; updatedAt: number; messages: ChatMessage[] };
+export type NexusProject = { id: string; name: string; description: string; ownerId: string; createdAt: number; updatedAt: number };
+export type BackgroundId = 'neon-nexus'|'aurora-intelligence'|'cyber-pulse'|'deep-space-ai'|'quantum-flow'|'neural-network'|'digital-galaxy'|'electric-horizon'|'violet-core'|'cyan-matrix'|'cosmic-intelligence'|'holographic-grid'|'synthetic-aurora'|'dark-energy'|'ai-singularity'|'quantum-grid'|'digital-ocean'|'neon-storm'|'cyber-aurora'|'infinite-circuit'|'plasma-core'|'future-city'|'data-dimension'|'neural-cosmos'|'nexus-eclipse';
+export type NexusSettings = { theme: 'dark' | 'light' | 'system'; language: 'en' | 'hi'; model: string; voiceLanguage: string; autoPlay: boolean; webSearch: boolean; memoryEnabled: boolean; displayName?: string; avatarUrl?: string; backgroundId: BackgroundId; lastNexusBackgroundId: BackgroundId; customBackgroundUrl?: string; customBackgroundFilename?: string; backgroundAnimation: 'low'|'medium'|'high'; backgroundParticles: boolean; ambientGlow: boolean; backgroundMotion: boolean; reducedMotion: boolean }; 
+export type Plugin = { id: string; name: string; description: string; version: string; icon: string; permissions: string[]; enabled: boolean; execution: 'built-in' | 'server' | 'unavailable'; status: 'ready' | 'configuration-required'; };
+export type NexusFolder = { id: string; name: string; createdAt: number };
+export type NexusPrompt = { id: string; title: string; description: string; text: string; category: string; favorite: boolean; createdAt: number };
+export type Personality = { id: string; name: string; avatar: string; description: string; instructions: string; style: string; createdAt: number };
+export type Memory = { id: string; text: string; createdAt: number };
+export type ToastItem = { id: string; variant: 'success' | 'error' | 'info'; title: string; description?: string };
+export type WorkspaceRole = 'developer' | 'editor';

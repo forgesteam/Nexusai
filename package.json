@@ -1,0 +1,28 @@
+{
+  "name": "nexus.ai",
+  "version": "1.0.0",
+  "description": "A customer-support AI dashboard with a knowledge base, embeddable web chat widget, lead capture, human handoff notifications, channel settings, and conversation review.",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "lucide-react": "0.577.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "^7.13.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.0",
+    "vite": "^8.0.0"
+  }
+}
